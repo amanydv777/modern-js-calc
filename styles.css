@@ -8,7 +8,8 @@ body {
     justify-content: center;
     align-items: center;
     background: url('https://source.unsplash.com/1600x900/?glass,technology') no-repeat center/cover;
-    background: rgba(0, 0, 0, 0.5); /* or a bg image with alpha */
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: white;
     font-family: sans-serif;
 }
 .sr-only {
@@ -62,9 +63,71 @@ button {
     backdrop-filter: blur(5px);
     transition: background 0.3s;
 }
+
+button.active {
+  background-color: rgba(255, 255, 255, 0.2); /* light glow */
+    transform: scale(1.05);
+    box-shadow: 0 0 10px #ffffff80;
+}
+
+button {
+    transition: all 0.1s ease;
+}
+
+
 button:hover {
     background: rgba(255,255,255,0.35);
 }
 button.zero {
     grid-column: span 2;
+}
+
+.calculator {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 20px;
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.calculator:hover {
+    transform: scale(1.01);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+}
+
+button {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    padding: 12px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+button:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+@keyframes popIn {
+    0% {
+    opacity: 0;
+    transform: translateY(50px) scale(0.95);
+}
+    100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+}
+
+.calculator {
+    animation: popIn 0.5s ease-out;
 }
