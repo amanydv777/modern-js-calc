@@ -131,3 +131,56 @@ button:hover {
 .calculator {
     animation: popIn 0.5s ease-out;
 }
+
+/* Title (GlassCalc 🔮) */
+.title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    background: linear-gradient(90deg, #00ffe7, #fff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: pulseGlow 1s infinite alternate;
+    text-align: center;
+}
+
+/* Tagline below title */
+.tagline {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.7);
+    font-style: italic;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* Text below display */
+.helper-text {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.5);
+    margin-top: 20px;
+    margin-bottom: 0px;
+    text-align: center;
+}
+
+/* Footer */
+.footer-text {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.4);
+    margin-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 10px;
+    text-align: center;
+
+}
+
+/* Neon glow animation for title */
+@keyframes pulseGlow {
+  from {
+    text-shadow: 0 0 8px #ccccccaf, 0 0 12px #00ffe7;
+  }
+  to {
+    text-shadow: 0 0 15px #ccc, 0 0 35px #00ffe7;
+  }
+}

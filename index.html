@@ -3,10 +3,14 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Glass Calculator</title>
+    <title>GlassCalc 🔮</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
+<div class="container">
+    <h1 class="title">Calculator</h1>
+    <p class="tagline">Your sleek & stylish calculator companion✨</p>
     <div class="calculator">
         <label for="display" class="sr-only">Calculator display</label>
         <input type="text" class="display" id="display" disabled />
@@ -28,9 +32,13 @@
         <button onclick="press('3')" data-key="3">3</button>
         <button onclick="calculate()" data-key="Enter">=</button>
         <button onclick="press('0')" class="zero" data-key="0">0</button>
+        <button onclick="press('00')">00</button>
         <button onclick="press('.')" data-key=".">.</button>
         </div>
     </div>
+    <p class="helper-text">Use keyboard or click buttons to use 🔢</p>
+    <footer class="footer-text">Made with ❤️ by Aman Yadav</footer>
+</div>
 
     <script src="script.js"></script>
 </body>
